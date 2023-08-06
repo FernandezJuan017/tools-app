@@ -1,3 +1,110 @@
 .logo.angular:hover {
   filter: drop-shadow(0 0 2em #e32727);
 }
+
+.sidenav-container {
+  width: 100%;
+  height: 100%;
+}
+
+.sidenav-content {
+  /* Comento display porque no funciona .curved */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  height: 100%;
+}
+
+.toggle-button {
+  display: flex;
+  margin: auto;
+}
+
+.sidenav {
+  padding: 25px;
+}
+ /* https://wweb.dev/resources/css-separator-generator  */
+/* .curved {
+  position: relative;
+  background: #2c3e50;
+  height: 25vh;
+  border-bottom-left-radius: 50% 23%;
+  border-bottom-right-radius: 50% 23%;
+} */
+
+
+/* 
+** Animacion Background **
+* https://wweb.dev/resources/animated-css-background-generator  
+*/
+@keyframes cube {
+  from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+  }
+  to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #abb2bf;
+  overflow: hidden;
+}
+.background li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #99a0ab;
+  color: transparent;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 16s ease-in forwards infinite;
+}
+
+.background li:nth-child(0) {
+  animation-delay: 0s;
+  left: 98vw;
+  top: 79vh;
+}
+
+.background li:nth-child(1) {
+  animation-delay: 2s;
+  left: 41vw;
+  top: 89vh;
+  border-color: #bcc3d2;
+}
+
+.background li:nth-child(2) {
+  animation-delay: 4s;
+  left: 74vw;
+  top: 55vh;
+  border-color: #bcc3d2;
+}
+
+.background li:nth-child(3) {
+  animation-delay: 6s;
+  left: 37vw;
+  top: 33vh;
+  border-color: #bcc3d2;
+}
+
+.background li:nth-child(4) {
+  animation-delay: 8s;
+  left: 5vw;
+  top: 14vh;
+  border-color: #bcc3d2;
+}
+/* 
+** Fin Animacion Background **
+*/
