@@ -23,6 +23,11 @@
 .sidenav {
   padding: 25px;
 }
+
+.spacer-toolbar {
+  flex: 1 1 auto;
+}
+
  /* https://wweb.dev/resources/css-separator-generator  */
 /* .curved {
   position: relative;
@@ -37,7 +42,7 @@
 ** Animacion Background **
 * https://wweb.dev/resources/animated-css-background-generator  
 */
-@keyframes cube {
+/* @keyframes cube {
   from {
       transform: scale(0) rotate(0deg) translate(-50%, -50%);
       opacity: 1;
@@ -104,7 +109,7 @@
   left: 5vw;
   top: 14vh;
   border-color: #bcc3d2;
-}
+} */
 /* 
 ** Fin Animacion Background **
 */

@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
 // Components Angular Material v16.1.7
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button'
+import {MatSidenavModule} from '@angular/material/sidenav'
+import {MatToolbarModule} from '@angular/material/toolbar'
 
 @NgModule({
   declarations: [],
@@ -10,6 +12,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CommonModule
   ],
   exports: [MatSidenavModule,
-            MatButtonModule]
+            MatButtonModule,
+            MatToolbarModule,
+            MatIconModule]
 })
 export class MaterialModule { }

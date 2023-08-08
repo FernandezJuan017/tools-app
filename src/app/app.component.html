@@ -8,17 +8,31 @@
     <!-- <section class="curved"></section> -->
 
     <!-- https://wweb.dev/resources/animated-css-background-generator -->
-    <ul class="background">
+    <!-- <ul class="background"> -->
         <!-- Animacion Background -->
-        <li></li><li></li><li></li><li></li><li></li>
+        <!-- <li></li><li></li><li></li><li></li><li></li> -->
         <!-- Animacion Background -->
+    <!-- </ul> -->
 
-        <h1 style="color:white;">Tools App</h1>
-        <!-- Toggle Sidenav -->
-         <!-- <button type="button" mat-button class="toggle-button" (click)="drawer.toggle()">
-           Toggle sidenav
-         </button> -->
-    </ul>
+      <!-- Toggle Sidenav -->
+      <!-- <button type="button" mat-button class="toggle-button" (click)="drawer.toggle()">
+        Toggle sidenav
+      </button> -->  
+
+      <!-- <h1 style="color:white;">Tools App</h1> -->
+      <mat-toolbar color="primary">
+        <button mat-icon-button aria-label="Icono del menú principal de la aplicación">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Tools App</span>
+      <span class="spacer-toolbar"></span>
+        <button mat-icon-button aria-label="Boton con un corazon de icono">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button  aria-label="Boton con un icono de compartir">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar>
    </mat-drawer-content>
   
 </mat-drawer-container>
