@@ -6,7 +6,7 @@
     "analytics": false
   },
   "projects": {
-    "tracking-app": {
+    "tools-app": {
       "root": "",
       "projectType": "application",
       "sourceRoot": "src",
@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tracking-app",
+            "outputPath": "dist/tools-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tracking-app:build:production"
+              "browserTarget": "tools-app:build:production"
             },
             "development": {
-              "browserTarget": "tracking-app:build:development"
+              "browserTarget": "tools-app:build:development"
             }
           },
           "defaultConfiguration": "development"
