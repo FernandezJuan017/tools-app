@@ -7,6 +7,13 @@ import { MaterialModule } from './material/material.module'
 //Routing
 import { AppRoutingModule } from './app-routing/app-routing.module'
 
+// Add Service to Provider 
+import { ApiDbService } from './api-service/api-db.service'
+
+// Http Client
+import { HttpClientModule } from '@angular/common/http';
+
+
 //Componentes
 import { AppComponent } from "./app.component"
 import { HomeComponent } from './home/home.component'
@@ -21,9 +28,10 @@ import { WeightTrackingComponent } from './weight-tracking/weight-tracking.compo
   imports: [MaterialModule,
             AppRoutingModule,
             BrowserAnimationsModule,
-            LayoutModule
+            LayoutModule,
+            HttpClientModule
            ],
-  providers: [],
+  providers: [ApiDbService],
   bootstrap: [AppComponent],
 })
 
