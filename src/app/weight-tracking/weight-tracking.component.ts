@@ -3,7 +3,7 @@ import { MatTable } from '@angular/material/table'
 import { MatPaginator } from '@angular/material/paginator'
 import { WeightTrackingService } from './weight-tracking.service'
 import { iWeightTracking } from '../models/weight-tracking'
-import { OnInit, AfterViewInit, Component, ViewChild, ChangeDetectorRef  } from '@angular/core'
+import { OnInit, AfterViewInit, Component, ViewChild } from '@angular/core'
 import { WeightTrackingDataSource } from './weight-tracking-datasource'
 
 @Component({
@@ -19,10 +19,9 @@ export class WeightTrackingComponent implements  OnInit ,AfterViewInit {
   dataSource: WeightTrackingDataSource
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'entity_id', 'date', 'weight']
+  displayedColumns = ['id', 'entity', 'date', 'weight']
 
-  constructor(private WeightTrackingService: WeightTrackingService,
-              private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private WeightTrackingService: WeightTrackingService) {
     this.dataSource = new WeightTrackingDataSource()
   }
 
@@ -34,8 +33,9 @@ export class WeightTrackingComponent implements  OnInit ,AfterViewInit {
   }
 
   private setDataSource(weightTrackingItems: iWeightTracking[]) {
-    this.dataSource.data = weightTrackingItems
-    this.table.dataSource = this.dataSource  
+    this.dataSource.data = this.WeightTrackingService.generateObjects(weightTrackingItems) 
+    this.table.dataSource = this.dataSource 
+       
     console.log("🚀 ~ file: weight-tracking.component.ts:41 ~ WeightTrackingComponent ~ setDataSource ~ this.table.dataSource:", this.table.dataSource)
   }
 

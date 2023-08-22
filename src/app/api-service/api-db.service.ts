@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs'
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { iWeightTracking } from '../models/weight-tracking'
+import { WeightTracking } from '../models/weight-tracking'
 import { enviroment } from '../../enviroments/enviroment'
 
 @Injectable({
@@ -19,10 +19,10 @@ export class ApiDbService {
     this.apiURL = enviroment.url_api
   }
 
-  public getWeightRecord(): Observable<iWeightTracking[]>{
+  public getWeightRecord(): Observable<WeightTracking[]>{
     let url = this.apiURL + '/weight-records'
 
-    return this.http.get<iWeightTracking[]>(url)
+    return this.http.get<WeightTracking[]>(url)
   }
 
 }

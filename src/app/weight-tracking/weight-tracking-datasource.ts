@@ -2,11 +2,10 @@ import { DataSource } from '@angular/cdk/collections'
 import { MatPaginator } from '@angular/material/paginator'
 import { MatSort } from '@angular/material/sort'
 import { map } from 'rxjs/operators'
-import { iWeightTracking } from '../models/weight-tracking'
+import { iWeightTracking, WeightTracking } from '../models/weight-tracking'
 import { Observable, of as observableOf, merge } from 'rxjs'
 
-// TODO: replace this with real data from your application
-const EXAMPLE_DATA: iWeightTracking[] = []
+
 
 /**
  * Data source for the WeightTracking view. This class should
@@ -14,7 +13,7 @@ const EXAMPLE_DATA: iWeightTracking[] = []
  * (including sorting, pagination, and filtering).
  */
 export class WeightTrackingDataSource extends DataSource<iWeightTracking> {
-  data: iWeightTracking[] = EXAMPLE_DATA;
+  data: WeightTracking[] = []
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
